@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from './components/Button';
+import App from './App';
 
-import './services/firebase'
+import './services/firebase';
+
+import './styles/global.scss';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Button />
-    <Button />
-    <Button />
-    <Button />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
 );
