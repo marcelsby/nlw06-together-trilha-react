@@ -1,13 +1,10 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { createContext, ReactNode } from 'react';
-import { auth, firebase } from '../services/firebase';
 
-type User = {
-    id: string;
-    name: string;
-    avatar: string;
-}
+import { User } from '../types/User';
+
+import { auth, firebase } from '../services/firebase';
 
 type AuthContextType = {
     user: User | undefined;
