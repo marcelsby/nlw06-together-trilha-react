@@ -2,12 +2,12 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { createContext, ReactNode } from 'react';
 
-import { User } from '../types/User';
-
 import { auth, firebase } from '../services/firebase';
 
+import { UserType } from '../types/UserType';
+
 type AuthContextType = {
-    user: User | undefined;
+    user: UserType | undefined;
     signInWithGoogle: () => Promise<void>;
 }
 
@@ -18,7 +18,7 @@ type AuthContextProviderProps = {
 export const AuthContext = createContext({} as AuthContextType);
 
 export function AuthContextProvider(props: AuthContextProviderProps) {
-    const [user, setUser] = useState<User>();
+    const [user, setUser] = useState<UserType>();
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {

@@ -9,8 +9,17 @@ header {
         justify-content: space-between;
         align-items: center;
 
-        > img {
+        img#logo {
             max-height: 45px;
+        }
+
+        > div {
+            display: flex;
+            gap: 16px;
+
+            button {
+                height: 40px;
+            }
         }
     }
 }
